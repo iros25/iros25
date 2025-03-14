@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IROS 2025 Workshop</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f8f0;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            color: #2c5f2d;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 16px;
+            color: #5d8b5d;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+
+        .banner-image {
+            width: 48%;
+            height: 400px;
+            background-color: #ddd;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .banner-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .banner-image img:hover {
+            transform: scale(1.03);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #2c5f2d;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .speakers {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .speaker {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .speaker:hover {
+            transform: translateY(-5px);
+        }
+
+        .speaker-image {
+            width: 120px;
+            height: 150px;
+            background-color: #ddd;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            margin: 15px;
+            float: left;
+            position: relative;
+        }
+
+        .speaker-info {
+            padding: 15px;
+        }
+
+        .speaker h3 {
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #2c5f2d;
+        }
+
+        .speaker p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .personal-website {
+            font-size: 12px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .submission {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .prize {
+            margin: 20px 0;
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .prize-item {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .schedule {
+            margin-top: 30px;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .schedule-table th {
+            background-color: #f2f2f2;
+            color: #2c5f2d;
+        }
+
+        .schedule-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .organizers {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .organizer {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .organizer-image {
+            width: 100px;
+            height: 120px;
+            background-color: #ddd;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            margin: 0 auto 15px;
+        }
+
+        .organizer h3 {
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #2c5f2d;
+        }
+
+        .organizer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .keynote {
+            font-weight: bold;
+            color: #2c5f2d;
+        }
+
+        .highlight {
+            color: #2c5f2d;
+        }
+
+        .organizer-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .speaker-img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>IROS 2025 Workshop on AI and Robotics For Future Farming</h1>
+        <p>October 20th, 2025</p>
+    </header>
+
+    <div class="banner">
+        <div class="banner-image">
+            <img src="./images/image_1.png" alt="Agricultural Robotics Research">
+        </div>
+        <div class="banner-image">
+            <img src="./images/image_2.webp" alt="Smart Farming Technology">
+        </div>
+    </div>
+
+    <section>
+        <h2>Introduction</h2>
+        <p>Robotics and AI have become fundamental drivers transforming global industries, including agriculture. The
+            agricultural sector, however, faces unique challenges due to its inherently unstructured environments,
+            hindering the widespread adoption of these technologies.</p>
+
+        <p>Simultaneously, the global demand for food, fiber, and fuel continues to rise, driven by population growth
+            and evolving consumer needs. The agricultural sector faces numerous challenges in meeting this demand,
+            including limited arable land, labor shortages, health and safety risks associated with farm work (e.g.,
+            chemical exposure, repetitive motion injuries, and ladder falls), and the adverse effects of climate change.
+            Recent advancements in AI, big data, and the Internet of Things (IoT) have led to intelligent farming
+            systems capable of precise monitoring, crop management optimization, and automated harvesting. Technologies
+            such as autonomous navigation, robotic harvesting and weeding, precision chemical applications, and
+            livestock automation (e.g., robotic milking and shearing) are demonstrating significant potential to
+            transform agriculture.</p>
+
+        <p>
+            This workshop aims to facilitate interdisciplinary collaboration among experts from agricultural
+            engineering, robotics, and AI research communities. By promoting knowledge exchange and showcasing
+            cutting-edge research and applications, the event seeks to accelerate the development and adoption of
+            AI-driven robotic technologies, ultimately ensuring a more efficient, sustainable, and resilient agri-food
+            system.
+        </p>
+
+        <p>More information can be seen <a href="#">here</a>.</p>
+
+        <p>Sponsor: Sponsored by the IEEE Robotics and Automation Society</p>
+
+        <h3>Technical Support</h3>
+        <ul>
+            <li><a href="#">IEEE Agricultural Robotics and Automation (ARA) Technical Committee</a></li>
+            <li><a href="#">IEEE Autonomous Ground Vehicles and Intelligent Transportation Systems (AGV-ITS) Technical
+                    Committee</a></li>
+        </ul>
+
+        <h3>Submission</h3>
+        <p class="submission">We encourage researchers to submit a short paper (maximum 4 page excluding references) or
+            a preprint of relevant work. Accepted abstracts will be posted on the workshop website and will not appear
+            in the official IEEE proceedings. You are encouraged to use IROS's suggested paper <a href="#">template</a>
+            and upload a PDF.</p>
+
+        <div class="prize">
+            <p>The best three workshop paper will be awarded with grant</p>
+            <div class="prize-item">1<sup>st</sup> Prize - $200</div>
+            <div class="prize-item">2<sup>nd</sup> Prize - $100</div>
+            <div class="prize-item">3<sup>rd</sup> Prize - $50</div>
+        </div>
+
+        <p>The Paper submissions will be handled with OpenReview through the following link</p>
+        <p><a href="#">https://openreview.net/ </a></p>
+    </section>
+
+    <section>
+        <h2>Speakers</h2>
+        <div class="speakers">
+            <a href="https://scholar.google.com/citations?user=yM7mty8AAAAJ&hl=en" class="speaker">
+                <div class="speaker-image">
+                    <img class="speaker-img" src="./images/speakers/Daobilige Su.jpg" alt="">
+                </div>
+                <div class="speaker-info">
+                    <h3>The progress of Agricultural Robotics in China</h3>
+                    <p>Daobilige Su</p>
+                    <p>College of Engineering, China Agricultural University</p>
+                    <div class="personal-website">Personal Website</div>
+                </div>
+            </a>
+
+            <a href="https://scholar.google.com/citations?user=KkuUEVgAAAAJ&hl=en" class="speaker">
+                <div class="speaker-image">
+                    <img class="speaker-img" src="./images/speakers/DR. MAHIRAH BINTI JAHARI.jpg" alt="">
+                </div>
+                <div class="speaker-info">
+                    <h3>Embracing the future: advancements and impact of smart agriculture technology in Malaysia</h3>
+                    <p>Mahirah Jahari</p>
+                    <p>Faculty of Engineering, University Putra Malaysia</p>
+                    <div class="personal-website">Personal Website</div>
+                </div>
+            </a>
+
+            <a href="https://scholar.google.fr/citations?user=cVFALvkAAAAJ&hl=fr" class="speaker">
+                <div class="speaker-image">
+                    <img class="speaker-img" src="./images/speakers/Johann Laconte.jpg" alt="">
+                </div>
+                <div class="speaker-info">
+                    <h3>Navigating Nature's Dance: Robotics for Agriculture and Environmental Monitoring in
+                        Ever-Changing Landscapes</h3>
+                    <p>Johann Laconte</p>
+                    <p>French National Institute for Agriculture, Food, and Environment (INRAE)</p>
+                    <div class="personal-website">Personal Website</div>
+                </div>
+            </a>
+
+            <a href="https://scholar.google.co.jp/citations?user=pnMyJLEAAAAJ&hl=en" class="speaker">
+                <div class="speaker-image">
+                    <img class="speaker-img" src="./images/speakers/Wei Guo.jpg" alt="">
+                </div>
+                <div class="speaker-info">
+                    <h3>Before and After: Transforming Orchard Pruning with 3D Sensing and Visualization.</h3>
+                    <p>Wei Guo</p>
+                    <p>Graduate School of Agricultural and Life Sciences, The University of Tokyo</p>
+                    <div class="personal-website">Personal Website</div>
+                </div>
+            </a>
+
+            <a href="https://www.researchgate.net/profile/Guo-Hao-10" class="speaker">
+                <div class="speaker-image">
+                    <img class="speaker-img" src="./images/speakers/Guo Hao.png" alt="">
+                </div>
+                <div class="speaker-info">
+                    <h3>3D Vision Unveiled: Precision Livestock Insights through Animal Shape Analysis</h3>
+                    <p>Hao Guo</p>
+                    <p>PChina Agriculture University</p>
+                    <div class="personal-website">Personal Website</div>
+                </div>
+            </a>
+
+            <a href="https://labs.wsu.edu/karkee-ag-robotics/" class="speaker">
+                <div class="speaker-image">
+                    <img class="speaker-img" src="./images/speakers/Manoj Karkee, PhD.jpg" alt="">
+                </div>
+                <div class="speaker-info">
+                    <h3>AI and Robotics in Specialty Crop Production</h3>
+                    <p>Manoj karkee</p>
+                    <p>Center for Precision and Automated Agricultural Systems and Dept. of Biological Systems
+                        Engineering,Washington State University</p>
+                    <div class="personal-website">Personal Website</div>
+                </div>
+            </a>
+
+            <a href="https://scholar.google.com/citations?user=QdXq7VsAAAAJ&hl=en" class="speaker">
+                <div class="speaker-image">
+                    <img class="speaker-img" src="./images/speakers/Lei Shu.jpg" alt="">
+                </div>
+                <div class="speaker-info">
+                    <h3>The Revolution in Plant Disease Detection Applications of Emerging Technologies and Intelligent
+                        Analysis</h3>
+                    <p>Lei Shu</p>
+                    <p>Nanjing Agriculture University</p>
+                    <div class="personal-website">Personal Website</div>
+                </div>
+            </a>
+
+            <a href="https://scholar.google.com/citations?user=lqjRbXgAAAAJ&hl=en" class="speaker">
+                <div class="speaker-image">
+                    <img class="speaker-img" src="./images/speakers/Maren Bennewitz.jpg" alt="">
+                </div>
+                <div class="speaker-info">
+                    <h3>Active Perception for Fruit mapping and Autonomous Harvesting</h3>
+                    <p>Maren Bennewitz</p>
+                    <p>University of Bonn</p>
+                    <div class="personal-website">Personal Website</div>
+                </div>
+            </a>
+
+            <a href="https://www.researchgate.net/profile/Zhenjiang-Zhou" class="speaker">
+                <div class="speaker-image">
+                    <img class="speaker-img" src="./images/speakers/Zhenjiang Zhou.png" alt="">
+                </div>
+                <div class="speaker-info">
+                    <h3>Diagnosis of Water and Nitrogen Status of Field Crops using Spectral and Imagery Methods</h3>
+                    <p>Zhenjiang Zhou</p>
+                    <p>College of Biosystems Engineering and Food Science, Zhejiang University</p>
+                    <div class="personal-website">Personal Website</div>
+                </div>
+            </a>
+
+            <a href="#" class="speaker">
+                <div class="speaker-image">
+
+                </div>
+                <div class="speaker-info">
+                    <h3>AI-Driven Robotic Tractor System for Autonomous Vineyard Operations</h3>
+                    <p>Dr. Jiajun Zhu</p>
+                    <p>Smart Agriculture Technical Expert, Weichai Lovol Intelligent Agricultural Technology Co., Ltd
+                    </p>
+                    <div class="personal-website">Personal Website</div>
+                </div>
+            </a>
+
+            <a href="https://info.scau.edu.cn/info_en/2018/0912/c3855a122096/page.psp" class="speaker">
+                <div class="speaker-image">
+                    <img class="speaker-img" src="./images/speakers/Deqin Xiao.jpg" alt="">
+                </div>
+                <div class="speaker-info">
+                    <h3>Research Exploration and Practice of Agricultural and Livestock Farming Robots</h3>
+                    <p>Deqin Xiao (Female)</p>
+                    <p>College of Mathematics and Informatics, South China Agricultural University</p>
+                    <div class="personal-website">Personal Website</div>
+                </div>
+            </a>
+
+            <a href="https://people.epfl.ch/josie.hughes?lang=en" class="speaker">
+                <div class="speaker-image">
+                    <img class="speaker-img" src="./images/speakers/Dr Josie Hughes.jpg" alt="">
+                </div>
+                <div class="speaker-info">
+                    <h3>Lab2Field translation for Agri-food technologies</h3>
+                    <p>Josie Hughes (Female)</p>
+                    <p>Institute of Mechanical Engineering, École Polytechnique Fédérale de Lausanne (EPFL), 1015
+                        Lausanne, Switzerland</p>
+                    <div class="personal-website">Personal Website</div>
+                </div>
+            </a>
+
+            <a href="https://www.researchgate.net/profile/Fu-Qiankun" class="speaker">
+                <div class="speaker-image">
+                    <img class="speaker-img" src="./images/speakers/Fu Qiankun.png" alt="">
+                </div>
+                <div class="speaker-info">
+                    <h3>Exploration and Application of Bionic Technology in Intelligent Corn Picking</h3>
+                    <p>Qiankun Fu</p>
+                    <p> College of Biological and Agricultural Engineering, College of Bionic Science and Engineering,
+                        Jilin University</p>
+                    <div class="personal-website">Personal Website</div>
+                </div>
+            </a>
+
+            <a href="https://scholar.google.co.id/citations?user=GpgH2TMAAAAJ&hl=en" class="speaker">
+                <div class="speaker-image">
+                    <img class="speaker-img" src="./images/speakers/Muharfiza.jpg" alt="">
+                </div>
+                <div class="speaker-info">
+                    <h3>TBD</h3>
+                    <p>Dr. Muharfiza,Director</p>
+                    <p>Indonesian Agricultural Engineering Polytechnic, Ministry of Agriculture, Republic of Indonesia
+                    </p>
+                    <div class="personal-website">Personal Website</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="schedule">
+        <h2>Tentative schedule</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Speaker <br>/Affiliation</th>
+                    <th>Topic/title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>8:30 - 8:30...</td>
+                    <td>All organizers</td>
+                    <td>Welcome and Introduction</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Session 1: Autonomous Systems for Agricultural Operations: novel methods, dedicated
+                        robotic concepts, prototypes and applications.</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Co-Chairs: Qiao</td>
+                </tr>
+                <tr>
+                    <td>8:30 - 8:45</td>
+                    <td>Prof. Daobilige Su<br>University of Florida</td>
+                    <td>The progress of Agricultural Robotics in China</td>
+                </tr>
+                <tr>
+                    <td>8:45 - 9:00</td>
+                    <td>Dr.Mahirah Jahari<br>Universiti Putra Malaysia</td>
+                    <td>Embracing the future: advancements and impact of smart agriculture technology in Malaysia</td>
+                </tr>
+                <tr>
+                    <td>9:00 - 9:15</td>
+                    <td>Dr. Johann Laconte<br>French National Institute for Agriculture, Food, and Environment (INRAE)
+                    </td>
+                    <td>Navigating Nature's Dance: Robotics for Agriculture and Environmental Monitoring in
+                        Ever-Changing Landscapes</td>
+                </tr>
+                <tr>
+                    <td>9:15 - 9:30</td>
+                    <td>Prof. Wei Guo<br>University of Tokyo</td>
+                    <td>Before and After: Transforming Orchard Pruning with 3D Sensing and Visualization</td>
+                </tr>
+                <tr>
+                    <td>9:30 - 9:45</td>
+                    <td>Manoj karkee<br>Washington State University</td>
+                    <td>AI and Robotics in Specialty Crop Production</td>
+                </tr>
+                <tr>
+                    <td>9:45 - 10:00</td>
+                    <td>Jilin University</td>
+                    <td>Exploration and Application of Bionic Technology in Intelligent Corn Picking</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 10:20</td>
+                    <td colspan="2">3-min Paper/Poster Presentations (breaks included)</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Session 2: AI and robotics-driven Solutions for Farm Management: current status,
+                        needs and demands for sustainable food production</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Co-Chairs: Huang</td>
+                </tr>
+                <tr>
+                    <td>10:20 - 10:35</td>
+                    <td>Dr. Lei Shu<br>Nanjing Agriculture University</td>
+                    <td>The Revolution in Plant Disease Detection Applications of Emerging Technologies and Intelligent
+                        Analysis</td>
+                </tr>
+                <tr>
+                    <td>10:35 - 11:00</td>
+                    <td>Zhenjiang Zhou<br>Zhejiang University</td>
+                    <td>Diagnosis of Water and Nitrogen Status of Field Crops using Spectral and Imagery Methods</td>
+                </tr>
+                <tr>
+                    <td>11:00 - 11:15</td>
+                    <td>Deqin Xiao<br>South China Agricultural University</td>
+                    <td>Research Exploration and Practice of Agricultural and Livestock Farming Robots</td>
+                </tr>
+                <tr>
+                    <td>11:15 - 11:30</td>
+                    <td>Hao Guo<br>China Agriculture University</td>
+                    <td>3D Vision Unveiled: Precision Livestock Insights through Animal Shape Analysis</td>
+                </tr>
+                <tr>
+                    <td>11:30 - 11:45</td>
+                    <td>Josie Hughes<br>École Polytechnique Fédérale de Lausanne (EPFL)</td>
+                    <td>Lab2Field translation for Agri-food technologies</td>
+                </tr>
+                <tr>
+                    <td>11:45 - 12:00</td>
+                    <td>Dr. Jiajun Zhu<br>Weichai Lovol Intelligent Agricultural Technology Co., Ltd</td>
+                    <td>: AI-Driven Robotic Tractor System for Autonomous Vineyard Operations</td>
+                </tr>
+                <tr>
+                    <td>12:00 - 12:15</td>
+                    <td>Dr.Muharfiza<br>Indonesian Agricultural Engineering Polytechnic</td>
+                    <td>TBD</td>
+                </tr>
+                <tr>
+                    <td>12:15 - 13:30</td>
+                    <td colspan="2">Networking and lunch</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Organizers</h2>
+        <div class="organizers">
+            <div class="organizer">
+                <div class="organizer-image">
+                    <img class="organizer-img" src="./images/organizers/Dr. Yongliang Qiao.jpg">
+                </div>
+                <h3>Dr. Yongliang Qiao</h3>
+                <p> Australian Institute for Machine Learning (AIML), The University of Adelaide, SA, 5000, Australia
+                </p>
+                <p>Email: yongliang.qiao@ieee.org</p>
+            </div>
+
+            <div class="organizer">
+                <div class="organizer-image">
+                    <img class="organizer-img"
+                        src="./images/organizers/Dr. Zichen Huang (Correspondence), Assistant professor, Zhejiang University.jpg">
+                </div>
+                <h3>Dr. Zichen Huang</h3>
+                <p>Assistant professor, Zhejiang University</p>
+                <p>Email: huangzichenss@zju.edu.cn</p>
+            </div>
+
+            <div class="organizer">
+                <div class="organizer-image">
+                    <img class="organizer-img" src="./images/organizers/Dr. João Valente.jpg">
+                </div>
+                <h3>Dr. João Valente</h3>
+                <p>Tenured Senior Scientist | Agro-Food Robotics, UAVs & Artificial Intelligence, Spanish National
+                    Research Council (CSIC),Centre for Automation and Robotics (CAR), 28500, Madrid, Spain</p>
+                <p>Email: joao.valente@csic.es</p>
+            </div>
+
+            <div class="organizer">
+                <div class="organizer-image">
+                    <img class="organizer-img" src="./images/organizers/Liangliang Yang.jpg">
+                </div>
+                <h3>Assoc. Prof. Liangliang Yang</h3>
+                <p>Department of Mechanical Engineering, Kitami Institute of Technology, Hokkaido, Japan</p>
+                <p>Email: yang@mail.kitami-it.ac.jp</p>
+            </div>
+
+            <div class="organizer">
+                <div class="organizer-image">
+                    <img class="organizer-img" src="./images/organizers/Prof. Meili Wang.jpg">
+                </div>
+                <h3>Prof. Meili Wang</h3>
+                <p>College of Information Engineering, Northwest A&F University, Yangling, Shaanxi 712100, China</p>
+                <p>Email: wml@nwsuaf.edu.cn</p>
+            </div>
+
+            <div class="organizer">
+                <div class="organizer-image">
+                    <img class="organizer-img" src="./images/organizers/Assoc. Prof. Yufei Liu.jpg">
+                </div>
+                <h3>Assoc. Prof. Yufei Liu</h3>
+                <p>Zhejiang University</p>
+                <p>Email: yufeiliu@zju.edu.cn</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Any JavaScript functionality can be added here
+            console.log('Workshop website loaded');
+        });
+    </script>
+</body>
+
+</html>
+```
