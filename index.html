@@ -251,13 +251,28 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <div class="logo-container">
             <img src="./images/logo.png" alt="IROS 2025 Workshop Logo" class="workshop-logo">
         </div>
         <h1>IROS 2025 Workshop on Agricultural Robotics and Automation: Driving Innovation in Agri-Food Systems</h1>
         <p>October 24th, Morning, 2025 (Pressroom D, Session 13)</p>
+    </header> -->
+
+    <header style="position: relative;">
+        <!-- 新增的左上角商标SVG（绝对定位，不影响原有元素） -->
+        <img src="nokov.svg" alt="商标"" style="position: absolute; top: -70px; left: 20px; z-index: 10; width: 200px; height: 200px;">
+
+
+        <!-- 原有logo容器（保持原样，仅微调左边距避免被商标覆盖） -->
+        <div class="logo-container" style="margin-left: 70px;"> <!-- 左边距等于商标宽度+间距 -->
+            <img src="./images/logo.png" alt="IROS 2025 Workshop Logo" class="workshop-logo">
+        </div>
+
+        <h1>IROS 2025 Workshop on Agricultural Robotics and Automation: Driving Innovation in Agri-Food Systems</h1>
+        <p>October 24th, Morning, 2025 (Pressroom D, Session 13)</p>
     </header>
+
 
     <div class="banner">
         <div class="banner-image">
@@ -665,7 +680,17 @@
                 <p>Zhejiang University</p>
                 <p>Email: yufeiliu@zju.edu.cn</p>
             </div>
+
+            <div class="organizer">
+                <div class="organizer-image">
+                    <img class="organizer-img" src="./images/organizers/zhangbaohua.png">
+                </div>
+                <h3>Prof. Baohua Zhang</h3>
+                <p>College of Smart Agriculture (Artificial Intelligence), Nanjing Agricultural University</p>
+                <p>Email: bhzhang@njau.edu.cn</p>
+            </div>
         </div>
+
     </section>
 
     <script>
