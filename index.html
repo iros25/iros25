@@ -17,6 +17,7 @@
         header {
             text-align: center;
             margin-bottom: 30px;
+            position: relative;
         }
 
         header h1 {
@@ -28,6 +29,36 @@
         header p {
             font-size: 16px;
             color: #5d8b5d;
+        }
+
+        /* 右上角 NoKOV 徽标及网址 */
+        .brand-badge {
+            position: absolute;
+            top: 11px;
+            right: 20px;
+            z-index: 10;
+            width: 200px;
+            text-align: center;
+        }
+
+        .brand-badge img {
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .brand-badge a {
+            display: inline-block;
+            margin-top: 4px;
+            font-size: 12px;
+            color: #0066cc;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .brand-badge a:hover {
+            text-decoration: underline;
         }
 
         .banner {
@@ -238,41 +269,59 @@
             color: #2c5f2d;
         }
 
-        .organizer-img {
+        .organizer-img,
+        .speaker-img {
             width: 100%;
             height: 100%;
         }
 
-        .speaker-img {
-            width: 100%;
-            height: 100%;
+        .brand-badge {
+            display: flex;
+            align-items: center;
+            /* 垂直居中对齐 */
+            gap: 6px;
+            /* 控制 Logo 与网址之间的间距，建议 4~12px 自行调整 */
+            flex-direction: column;
+        }
+
+        .brand-badge img {
+            height: 36px;
+            /* 控制 Logo 高度，避免过大 */
+            display: block;
+            /* 去除底部多余间隙 */
+        }
+
+        .brand-badge a {
+            font-size: 14px;
+            /* 字号合适 */
+            color: #0066cc;
+            /* 链接颜色 */
+            text-decoration: none;
+            /* 去掉下划线 */
+        }
+
+        .brand-badge a:hover {
+            text-decoration: underline;
+            /* 悬停时显示下划线 */
         }
     </style>
 </head>
 
 <body>
-    <!-- <header>
-        <div class="logo-container">
-            <img src="./images/logo.png" alt="IROS 2025 Workshop Logo" class="workshop-logo">
-        </div>
-        <h1>IROS 2025 Workshop on Agricultural Robotics and Automation: Driving Innovation in Agri-Food Systems</h1>
-        <p>October 24th, Morning, 2025 (Pressroom D, Session 13)</p>
-    </header> -->
+    <!-- 右上角 NoKOV 徽标与网址 -->
+    <div class="brand-badge">
+        <img src="nokov.svg" alt="NoKOV Logo">
+        <a href="https://www.nokov.com/" target="_blank" rel="noopener">https://www.nokov.com/</a>
+    </div>
 
-    <header style="position: relative;">
-        <!-- 新增的左上角商标SVG（绝对定位，不影响原有元素） -->
-        <img src="nokov.svg" alt="商标"" style="position: absolute; top: -70px; left: 20px; z-index: 10; width: 200px; height: 200px;">
-
-
-        <!-- 原有logo容器（保持原样，仅微调左边距避免被商标覆盖） -->
-        <div class="logo-container" style="margin-left: 70px;"> <!-- 左边距等于商标宽度+间距 -->
+    <header>
+        <div class="logo-container" style="margin-left: 70px;">
             <img src="./images/logo.png" alt="IROS 2025 Workshop Logo" class="workshop-logo">
         </div>
 
         <h1>IROS 2025 Workshop on Agricultural Robotics and Automation: Driving Innovation in Agri-Food Systems</h1>
         <p>October 24th, Morning, 2025 (Pressroom D, Session 13)</p>
     </header>
-
 
     <div class="banner">
         <div class="banner-image">
@@ -328,7 +377,9 @@
         </div>
 
         <p>The Paper submissions will be handled with OpenReview through the following link</p>
-        <p><a href="#">https://openreview.net/group?id=IEEE.org/IROS/2025/Workshop/Agricultural_Robotics#tab-recent-activity</a></p>
+        <p><a
+                href="#">https://openreview.net/group?id=IEEE.org/IROS/2025/Workshop/Agricultural_Robotics#tab-recent-activity</a>
+        </p>
     </section>
 
     <section>
@@ -390,7 +441,7 @@
                 <div class="speaker-info">
                     <h3>3D Vision Unveiled: Precision Livestock Insights through Animal Shape Analysis</h3>
                     <p>Hao Guo</p>
-                    <p>PChina Agriculture University</p>
+                    <p>China Agriculture University</p>
                     <div class="personal-website">Personal Website</div>
                 </div>
             </a>
@@ -420,18 +471,6 @@
                     <div class="personal-website">Personal Website</div>
                 </div>
             </a>
-
-            <!-- <a href="https://scholar.google.com/citations?user=lqjRbXgAAAAJ&hl=en" class="speaker">
-                <div class="speaker-image">
-                    <img class="speaker-img" src="./images/speakers/Maren Bennewitz.jpg" alt="">
-                </div>
-                <div class="speaker-info">
-                    <h3>Active Perception for Fruit mapping and Autonomous Harvesting</h3>
-                    <p>Maren Bennewitz</p>
-                    <p>University of Bonn</p>
-                    <div class="personal-website">Personal Website</div>
-                </div>
-            </a> -->
 
             <a href="https://www.researchgate.net/profile/Zhenjiang-Zhou" class="speaker">
                 <div class="speaker-image">
@@ -606,7 +645,7 @@
                 <tr>
                     <td>11:45 - 12:00</td>
                     <td>Dr. Jiajun Zhu<br>Weichai Lovol Intelligent Agricultural Technology Co., Ltd</td>
-                    <td>: AI-Driven Robotic Tractor System for Autonomous Vineyard Operations</td>
+                    <td>AI-Driven Robotic Tractor System for Autonomous Vineyard Operations</td>
                 </tr>
                 <tr>
                     <td>12:00 - 12:15</td>
@@ -639,8 +678,8 @@
                     <img class="organizer-img"
                         src="./images/organizers/Dr. Zichen Huang (Correspondence), Assistant professor, Zhejiang University.jpg">
                 </div>
-                <h3>Dr. Zichen Huang</h3>
-                <p>Assistant professor, Zhejiang University</p>
+                <h3>Prof. Zichen Huang</h3>
+                <p>Zhejiang University</p>
                 <p>Email: huangzichenss@zju.edu.cn</p>
             </div>
 
@@ -690,12 +729,21 @@
                 <p>Email: bhzhang@njau.edu.cn</p>
             </div>
         </div>
+    </section>
 
+    <!-- 新增：支持单位 -->
+    <section>
+        <h2>Supported by</h2>
+        <ol>
+            <li>College of Biosystems Engineering and Food Science, Zhejiang University</li>
+            <li>The Smart Agriculture Professional Committee of the Chinese Society of Crop Science</li>
+            <li>China-UK Joint Research Laboratory for Plant Phenotyping</li>
+            <li>College of Information Engineering, Northwest A&F University</li>
+        </ol>
     </section>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Any JavaScript functionality can be added here
             console.log('Workshop website loaded');
         });
     </script>
